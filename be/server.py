@@ -1,10 +1,11 @@
 # Flask server to handle OTP requests
 
-from flask import Flask, request, jsonify
-from flask_cors import CORS
-import requests
-import dotenv
 import random
+
+import dotenv
+import requests
+from flask import Flask, jsonify, request
+from flask_cors import CORS
 
 dotenv.load_dotenv()
 SMTP2GO_API_KEY = dotenv.dotenv_values().get("SMTP2GO_API_KEY")
